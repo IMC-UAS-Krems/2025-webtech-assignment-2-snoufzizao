@@ -14,9 +14,11 @@
     <nav class="navbar fixed-top navbar-dark bg-success">
       <div class="container-fluid ">
         <a class="navbar-brand me-auto" href="#">Angel Tree Donations</a>
-        <button class="btn btn-outline-light ms-2" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas"aria-controls="cartOffcanvas"> Cart
-        </button>
-        <br>
+        <!-- cart button-->
+        <button class="btn btn-outline-light ms-2 position-relative" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas"aria-controls="cartOffcanvas" id="cartbutton"> Cart
+        <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">0</span>
+      </button>
+        <!-- actual navbar-->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>

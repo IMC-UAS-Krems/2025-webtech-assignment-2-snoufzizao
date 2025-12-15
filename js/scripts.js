@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
 console.log(cart);
 updatecartoffcanvas();
+updatecartcount(); //giu' 
     
     }
 
@@ -81,4 +82,16 @@ function updatecartoffcanvas() {
   taxelement.textContent = taxed.toFixed(2);
   cartTotal.textContent = total.toFixed(2);
 }
+
+//little cart counter badge
+function updatecartcount() {
+  const cartCount = document.getElementById("cart-count");
+  let totalitems = 0;
+  cart.forEach(item => {
+    totalitems += item.quantity;
+  });
+  cartCount.textContent = totalitems;
+}
+
+
 });
