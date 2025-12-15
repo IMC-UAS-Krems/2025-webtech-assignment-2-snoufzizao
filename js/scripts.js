@@ -93,5 +93,18 @@ function updatecartcount() {
   cartCount.textContent = totalitems;
 }
 
+//show checkout when checkoutbtn from cart clicked
+const checkoutBtn = document.getElementById("checkoutBtn");
+const checkoutsection = document.getElementById("checkout-section");
+const cartoffcanvas = document.getElementById("cartOffcanvas");
+
+checkoutBtn.addEventListener("click", function (){
+  checkoutsection.classList.remove("d-none");
+
+  const offcanvas = bootstrap.Offcanvas.getInstance(cartoffcanvas);
+  offcanvas.hide();
+
+  checkoutsection.scrollIntoView({ behavior: "smooth" });
+})
 
 });
