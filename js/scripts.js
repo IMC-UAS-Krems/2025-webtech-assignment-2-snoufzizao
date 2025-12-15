@@ -107,4 +107,51 @@ checkoutBtn.addEventListener("click", function (){
   checkoutsection.scrollIntoView({ behavior: "smooth" });
 })
 
+
+//hidden confir after checkout 
+const checkoutform = document.getElementById("checkoutform");
+const confirmationsection = document.getElementById("confirmationsection");
+
+checkoutform.addEventListener("submit", function (event) {
+  event.preventDefault(); //prevents it from submitting normally and reloading page 
+
+  checkoutsection.classList.add("d-none");
+  confirmationsection.classList.remove("d-none");
+
+  updateconfirmationitems();
+
+});
+//after the checkout calvulation for confrimation page idk if i couldve reused the previous calculations 
+function updateconfirmationitems() {
+  const confirmationitems = document.getElementById("confirmationitems");
+  confirmationitems.innerHTML = "";
+
+  let subtotal = 0;
+  let totalitems = 0;
+  
+  cart.forEach(item => {
+    const itemtotal = item.price * item.quantity;
+    subtotal += itemtotal;
+    totalitems += item.quantity;
+
+    confirmationitems.innerHTML += `
+    <p>${item.name} x ${item.quantity}
+    <span class="float-end">€${itemtotal.toFixed(2)}</span></p>
+    `;
+  });
+
+  let discount =0;
+  if (totalitems >= 3) {
+    discount = subtotal * discountx;
+  }
+  const discounted = subtotal - discount;
+  const taxed = discounted * tax;
+  const total = discounted + taxed;
+
+  document.getElementById("confirm-subtotal").textContent = subtotal.toFixed(2);
+  document.getElementById("confirm-discount").textContent = discount.toFixed(2);
+  document.getElementById("confirm-tax").textContent = taxed.toFixed(2);
+  document.getElementById("confirm-total").textContent = total.toFixed(2);
+}
+
 });

@@ -1,10 +1,51 @@
-.card-img-top {
-  height: 200px;
-  object-fit: cover;
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+    background-color: #207935c7;
 }
 
-.body {
-  background-color: #092d1a;
+
+header nav {
+    background-color: #207935;
 }
 
-.img {}
+
+
+
+footer {
+    background-color: #207935;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+img { width: 200px;
+       height: 200px;
+    object-fit: cover;
+}
+
+.card {
+    background-color: #d52525;
+
+}
+
+#aboutus {
+    font-size: large;
+    color: rgb(0, 0, 0);
+    border: 2px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000000a5;
+    padding: 20px;
+    background-color: #2079359d;
+}
+
+
+#confirmationsection {
+    font-size: large;
+    color: rgb(0, 0, 0);
+    border: 2px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000000a5;
+    padding: 20px;
+    background-color: white;
+}

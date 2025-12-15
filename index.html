@@ -6,14 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Angel Tree Donations</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
-  <header>
-    <nav class="navbar fixed-top navbar-dark bg-success">
+  <header id="header">
+    <nav class="navbar fixed-top ">
       <div class="container-fluid">
-        <a class="navbar-brand me-auto" href="#">Angel Tree Donations</a>
+        <a class="navbar-brand me-auto" href="#" style="color: white;">Angel Tree Donations</a>
         <!-- cart button-->
         <button class="btn btn-outline-light ms-2 position-relative" data-bs-toggle="offcanvas"
           data-bs-target="#cartOffcanvas" aria-controls="cartOffcanvas" id="cartbutton">
@@ -46,8 +46,8 @@
   <main>
     <!-- little about us section -->
     <div class="container">
-      <h1 class="text-center my-5 pt-5">About us</h1>
-      <p class="text-center">
+      <h1 class="text-center my-5 pt-5"><b>ABOUT US</b></h1>
+      <p class="text-center" id="aboutus">
         We are a non-profit organization dedicated to providing essential
         goods and services to families in need, especially as the holiday
         season approaches and can be a challenging time for many!<br />We
@@ -58,7 +58,7 @@
     </div>
 
     <!-- product catalog section -->
-    <h2 class="text-center my-5 pt-5" id="catalog">Product Catalog</h2>
+    <h1 class="text-center my-5 pt-5" id="catalog"><b>PRODUCT CATALOG</b></h1>
     <section id="product-catalog" class="container my-5 pt-5">
       <div class="row g-4">
         <div class="col-6 col-md-4 col-lg-3">
@@ -246,14 +246,14 @@
     </div>
   </div>
 
-  <!--checkout has o be hidden-->
+  <!--checkout has o be hidden (d-none then remove)-->
 
   <div class="container my-5 d-none" id="checkout-section">
     <div class="row">
       <div class="col-lg-8 mx-auto">
         <h4 class="mb-3">Billing address</h4>
 
-        <form>
+        <form id="checkoutform"> <!--for hidden confirmation after-->
           <div class="row g-3">
             <div class="col-sm-6">
               <label class="form-label">First name</label>
@@ -267,7 +267,9 @@
 
             <div class="col-12">
               <label class="form-label">Email </label>
-              <input type="email" class="form-control" placeholder="you@example.com" oninvalid="this.setCustomValidity('Please enter a valid email address!')" oninput="this.setCustomValidity('')"/>
+              <input type="email" class="form-control" placeholder="you@example.com"
+                oninvalid="this.setCustomValidity('Please enter a valid email address!')"
+                oninput="this.setCustomValidity('')" />
             </div>
 
             <div class="col-12">
@@ -277,12 +279,12 @@
 
             <div class="col-md-5">
               <label class="form-label">Country</label>
-              <input type="text" class="form-control" placeholder="Austria"/>
+              <input type="text" class="form-control" placeholder="Austria" />
             </div>
 
             <div class="col-md-4">
               <label class="form-label">State</label>
-              <input type="text" class="form-control" placeholder="Tirol"/>
+              <input type="text" class="form-control" placeholder="Tirol" />
             </div>
 
             <div class="col-md-3">
@@ -355,7 +357,32 @@
     </div>
   </div>
 
-  <footer class="text-center py-4 bg-light mt-5" id="footer">
+  <!-------------- confirmation section (?)--------------->
+  <div class="container my-5 d-none" id="confirmationsection">
+    <div class="col-lg-8 mx-auto">
+      <h2 class="mb-4 text-success">Thank you for your donation!</h2>
+
+      <p>Your donation has been received successfully!</p>
+
+      <h4 class="mt-4">Donation Summary</h4>
+
+      <div id="confirmationitems"></div>
+
+      <hr>
+
+      <p>Subtotal: €<span id="confirm-subtotal"></span></p>
+      <p>Discount: −€<span id="confirm-discount"></span></p>
+      <p>Tax: €<span id="confirm-tax"></span></p>
+
+      <hr>
+
+      <p class="fw-bold">
+        Total Paid: €<span id="confirm-total"></span>
+      </p>
+    </div>
+  </div>
+
+  <footer class="text-center py-4 mt-5" id="footer">
     <div class="container d-flex justify-content-between">
       <p>2025 Angel Tree Donations.</p>
       <p>contact@angeltree.krems.com</p>
