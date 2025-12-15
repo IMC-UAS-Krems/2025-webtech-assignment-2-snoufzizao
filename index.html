@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Angel Tree Donations</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header>
+    <nav class="navbar fixed-top navbar-dark bg-success">
+      <div class="container-fluid ">
+        <a class="navbar-brand me-auto" href="#">Angel Tree Donations</a>
+        <button class="btn btn-outline-light ms-2" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas"aria-controls="cartOffcanvas"> Cart
+        </button>
+        <br>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#catalog">Catalog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#footer">Contact</a>
+            </li>
+          </ul>
+        </div>
+        
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- little about us section -->
+    <div class="container">
+      <h1 class="text-center my-5 pt-5">About us</h1>
+      <p class="text-center">
+        We are a non-profit organization dedicated to providing essential
+        goods and services to families in need, especially as the holiday
+        season approaches and can be a challenging time for many!<br />We
+        believe that every child deserves a happy holiday, and with your help,
+        we can make that happen, we depend on donations and the kindness of
+        people like you.
+      </p>
+    </div>
+
+    <!-- product catalog section -->
+    <h2 class="text-center my-5 pt-5" id="catalog">Product Catalog</h2>
+    <section id="product-catalog" class="container my-5 pt-5">
+      <div class="row g-4">
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card h-100">
+            <img src="img/blanket.jpg" class="card-img-top" alt="Blanket" />
+            <div class="card-body">
+              <h5 class="card-title">Warm Blanket</h5>
+              <p class="card-text">
+                Provides warmth and comfort to families.
+              </p>
+              <p class="fw-bold">20.00€</p>
+              <button class="btn btn-success add-to-cart" data-name="blanket" data-price="20.00" data-image="img/blanket.jpg">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card h-100">
+            <img src="img/hygene.jpg" class="card-img-top" alt="Hygiene Kit" />
+            <div class="card-body">
+              <h5 class="card-title">Hygiene Kit</h5>
+              <p class="card-text">
+                Provides essential hygiene products to families.
+              </p>
+              <p class="fw-bold">15.00€</p>
+              <button class="btn btn-success add-to-cart" data-name="hygiene kit" data-price="15.00" data-image="img/hygene.jpg">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card h-100">
+            <img src="img/schoolkit.webp" class="card-img-top" alt="School Kit" />
+            <div class="card-body">
+              <h5 class="card-title">School Kit</h5>
+              <p class="card-text">Provides school supplies to children.</p>
+              <p class="fw-bold">18.00€</p>
+              <button class="btn btn-success add-to-cart" data-name="school kit" data-price="18.00" data-image="img/schoolkit.webp">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card h-100">
+            <img src="img/scarf.webp" class="card-img-top" alt="Scarf" />
+            <div class="card-body">
+              <h5 class="card-title">Scarf and gloves</h5>
+              <p class="card-text">
+                Provides warmth and comfort to families.
+              </p>
+              <p class="fw-bold">10.00€</p>
+              <button class="btn btn-success add-to-cart" data-name="scarf and gloves" data-price="10.00" data-image="img/scarf.webp">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card h-100">
+            <img src="img/artkit.jpg" class="card-img-top" alt="Art Kit" />
+            <div class="card-body">
+              <h5 class="card-title">Art Kit</h5>
+              <p class="card-text">Provides art supplies to children.</p>
+              <p class="fw-bold">15.00€</p>
+              <button class="btn btn-success add-to-cart" data-name="art kit" data-price="15.00" data-image="img/artkit.jpg">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card h-100">
+            <img src="img/legoset.webp" class="card-img-top" alt="Lego Set" />
+            <div class="card-body">
+              <h5 class="card-title">Lego Set</h5>
+              <p class="card-text">
+                Provides creative building opportunities for children.
+              </p>
+              <p class="fw-bold">45.00€</p>
+              <button class="btn btn-success add-to-cart" data-name="lego set" data-price="45.00" data-image="img/legoset.webp">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card h-100">
+            <img src="img/bookset.webp" class="card-img-top" alt="Book Set" />
+            <div class="card-body">
+              <h5 class="card-title">Book Set</h5>
+              <p class="card-text">Provides educational books to children.</p>
+              <p class="fw-bold">25.00€</p>
+              <button class="btn btn-success add-to-cart" data-name="book set" data-price="25.00" data-image="img/bookset.webp">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card h-100">
+            <img src="img/baby set.jpg" class="card-img-top" alt="Baby Set" />
+            <div class="card-body">
+              <h5 class="card-title">Baby Set</h5>
+              <p class="card-text">Provides essential items for newborns.</p>
+              <p class="fw-bold">30.00€</p>
+              <button class="btn btn-success add-to-cart" data-name="baby set" data-price="30.00" data-image="img/baby set.jpg">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card h-100">
+            <img src="img/board games.jpg" class="card-img-top" alt="Board Games" />
+            <div class="card-body">
+              <h5 class="card-title">Board Games</h5>
+              <p class="card-text">
+                Provides entertainment and learning opportunities for
+                families.
+              </p>
+              <p class="fw-bold">25.00€</p>
+              <button class="btn btn-success add-to-cart" data-name="board game" data-price="25.00" data-image="img/board games.jpg">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card h-100">
+            <img src="img/gift card.jpg" class="card-img-top" alt="Gift Card" />
+            <div class="card-body">
+              <h5 class="card-title">Gift Card</h5>
+              <p class="card-text">
+                Provides a way for families to choose their own gifts.
+              </p>
+              <p class="fw-bold">20.00€</p>
+              <button class="btn btn-success add-to-cart" data-name="gift card" data-price="20.00" data-image="img/gift card.jpg">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- cart offcanvas -->
+
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel">
+
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="cartOffcanvasLabel">Your Cart</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+
+    <div class="offcanvas-body">
+      <div id="cart-items">
+        <p class="text-muted">Your cart is empty.</p>
+      </div>
+
+      <hr>
+
+      <p>Subtotal: €<span id="subtotal">0.00</span></p>
+      <p class="text-success">Discount: −€<span id="discount">0.00</span></p>
+      <p>Tax: €<span id="tax">0.00</span></p>
+      <hr>
+
+      <p class="fw-bold">
+        Total: €<span id="cart-total">0.00</span>
+      </p>
+
+      <button class="btn btn-success w-100 mt-3" id="checkoutBtn">
+        Checkout
+      </button>
+    </div>
+  </div>
+
+
+<footer class="text-center py-4 bg-light mt-5" id="footer">
+    <div class="container d-flex justify-content-between">
+      <p> 2025 Angel Tree Donations.</p>
+      <p> contact@angeltree.krems.com</p>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>
